@@ -1,14 +1,15 @@
 import type { Configuration } from "@rspack/cli";
 import path from "node:path";
 
+
 export default {
   entry: {
     main: "./src/index.jsx",
   },
   experiments: {
     rspackFuture: {
-      disableTransformByDefault:true
-    }
+      disableTransformByDefault: true,
+    },
   },
   output: {
     filename: "main.js",
@@ -26,47 +27,47 @@ export default {
     rules: [
       {
         test: /\.svg$/,
-        type: 'asset'
+        type: "asset",
       },
       {
         test: /\.(js|jsx)$/,
-        loader: 'builtin:swc-loader',
+        loader: "builtin:swc-loader",
         options: {
           sourceMap: true,
           jsc: {
             parser: {
-              syntax: 'ecmascript',
-              jsx:true
+              syntax: "ecmascript",
+              jsx: true,
             },
-             transform: {
-                react: {
-                  runtime: 'automatic'
-                },
+            transform: {
+              react: {
+                runtime: "automatic",
               },
+            },
           },
         },
-        type: 'javascript/auto',
+        type: "javascript/auto",
       },
       {
         test: /\.(ts|tsx)$/,
-        loader: 'builtin:swc-loader',
+        loader: "builtin:swc-loader",
         options: {
           sourceMap: true,
           jsc: {
             parser: {
-              syntax: 'typescript',
-              jsx:true
+              syntax: "typescript",
+              jsx: true,
             },
-             transform: {
-                react: {
-                  runtime: 'automatic'
-                },
+            transform: {
+              react: {
+                runtime: "automatic",
               },
+            },
           },
         },
-        type: 'javascript/auto',
-      }
-    ]
+        type: "javascript/auto",
+      },
+    ],
   },
   builtins: {
     html: [
@@ -76,5 +77,6 @@ export default {
       },
     ],
   },
-  externalsType: 'script'
+
+  externalsType: "script",
 } satisfies Configuration;
