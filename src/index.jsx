@@ -23,9 +23,9 @@ export function App() {
           href="https://preactjs.com/guide/v10/differences-to-react"
         />
         <Resource
-          title="Learn Vite"
-          description="To learn more about Vite and how you can customize it to fit your needs, take a look at their excellent documentation"
-          href="https://vitejs.dev"
+          title="Learn Rspack"
+          description="To learn more about Rspack and how you can customize it to fit your needs, take a look at their excellent documentation"
+          href="https://rspack.dev"
         />
       </section>
     </div>
