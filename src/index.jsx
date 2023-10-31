@@ -1,5 +1,5 @@
 import "preact/debug";
-import { useEffect, useState ,render} from "react";
+import { render } from "preact";
 import preactLogo from './assets/preact.svg';
 import "./style.css";
 
