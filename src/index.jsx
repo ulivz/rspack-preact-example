@@ -1,14 +1,16 @@
-import { render } from "preact";
-// import preactLogo from './assets/preact.svg';
+import "preact/debug";
+import { useEffect, useState ,render} from "react";
+import preactLogo from './assets/preact.svg';
 import "./style.css";
 
 export function App() {
   return (
     <div>
       <a href="https://preactjs.com" target="_blank">
-        <img alt="Preact logo" height="160" width="160" />
+        <img alt="Preact logo" height="160" width="160" src={preactLogo} />
       </a>
-      <h1>Get Started building Vite-powered Preact Apps </h1>
+
+      <h1>Get Started building Rspack-powered Preact Apps </h1>
       <section>
         <Resource
           title="Learn Preact"
@@ -21,9 +23,9 @@ export function App() {
           href="https://preactjs.com/guide/v10/differences-to-react"
         />
         <Resource
-          title="Learn Vite"
-          description="To learn more about Vite and how you can customize it to fit your needs, take a look at their excellent documentation"
-          href="https://vitejs.dev"
+          title="Learn Rspack"
+          description="To learn more about Rspack and how you can customize it to fit your needs, take a look at their excellent documentation"
+          href="https://rspack.dev"
         />
       </section>
     </div>
