@@ -15,14 +15,6 @@ export default {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
   },
-  resolve: {
-    alias: {
-      react: "preact/compat",
-      "react-dom/test-utils": "preact/test-utils",
-      "react-dom": "preact/compat",
-      "react/jsx-runtime": "preact/jsx-runtime",
-    },
-  },
   module: {
     rules: [
       {
@@ -42,6 +34,7 @@ export default {
             transform: {
               react: {
                 runtime: "automatic",
+                importSource: 'preact'
               },
             },
           },
@@ -61,6 +54,7 @@ export default {
             transform: {
               react: {
                 runtime: "automatic",
+                importSource: 'preact'
               },
             },
           },
